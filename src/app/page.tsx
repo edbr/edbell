@@ -63,7 +63,7 @@ export default function Home() {
 								<span className="font-code">
 									<LetterFx
 										trigger="instant">
-										Helping designers code and developers design
+										designers code and developers design
 									</LetterFx>
 								</span>
 							</Heading>
