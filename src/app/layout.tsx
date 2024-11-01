@@ -86,11 +86,17 @@ export default function RootLayout({
 		<Flex
 			as="html" lang="en"
 			fillHeight background="page"
-			data-neutral={style.neutral} data-brand={style.brand} data-accent={style.accent}
-			data-border={style.border} data-theme={style.theme}
-			data-solid={style.solid} data-solid-style={style.solidStyle}
-			data-surface={style.surface} data-transition={style.transition}
+			data-theme="dark"
+data-brand="green"
+data-accent="aqua"
+data-neutral="gray"
+data-border="rounded"
+data-solid="color"
+data-solid-style="flat"
+data-surface="filled"
+data-transition="all"
 			data-scaling={style.scaling}
+			
 			className={classNames(
 				primary.variable, code.variable,
 				secondary ? secondary.variable : '',
