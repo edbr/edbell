@@ -19,6 +19,8 @@ import {
 	HiInformationCircle,
 	HiExclamationCircle,
 	HiCheckCircle,
+	HiEnvelope,
+	HiMiniIdentification,
 } from "react-icons/hi2";
 
 import {
@@ -47,4 +49,6 @@ export const iconLibrary: Record<string, IconType> = {
 	arrowUpRight: HiArrowUpRight,
 	minus: HiMiniMinus,
 	plus: HiMiniPlus,
+	Envelope: HiEnvelope,
+	MiniIdentification: HiMiniIdentification,
 };

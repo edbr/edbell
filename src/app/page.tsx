@@ -2,24 +2,24 @@
 
 import React from 'react';
 
-import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background, LetterFx, Arrow } from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background, LetterFx, SparkleFx, GlitchFx, Arrow, } from '@/once-ui/components';
 import Link from 'next/link';
 
 export default function Home() {
 	const links = [
 		{
 			href: "https://once-ui.com/docs/theming",
-			title: "Themes",
+			title: "Experience",
 			description: "Style your app in minutes.",
 		},
 		{
 			href: "https://once-ui.com/docs/flexComponent",
-			title: "Layout",
+			title: "Projects",
 			description: "Build responsive layouts.",
 		},
 		{
 			href: "https://once-ui.com/docs/typography",
-			title: "Typography",
+			title: "Get in touch",
 			description: "Scale text automatically.",
 		},
 	];
@@ -39,11 +39,33 @@ export default function Home() {
 					fillWidth fillHeight padding="l" gap="l">
 					<Flex
 						mobileDirection="column"
-						fillWidth gap="24">
+						fillWidth gap="12">
 						<Flex
 							position="relative"
 							flex={2} paddingTop="56" paddingX="xl">
-							<Logo size="xl" icon={false} style={{zIndex: '1'}}/>
+							<GlitchFx
+  							speed="fast"
+  							interval={120}
+  							trigger="hover"
+							 style={{
+								zIndex: 0, // Set SparkleFx behind the image
+							}}
+							>	
+							<img src="images/IMG_3417.png" // replace with the actual path to your image 
+							alt="Eduardo Profile" 
+							style={{ 
+								width: '150px',        // Adjust as needed for your layout
+								height: '150px',       // Match width for a circular crop
+								borderRadius: '50%',   // Makes the image circular
+								objectFit: 'cover',    // Ensures the image fills the circular area
+								opacity: '0.8',        // Adjust opacity as needed
+								transition: 'opacity 0.3s', // Smooth transition for hover effect 
+								zIndex: 1,             // Ensure the image appears above SparkleFx
+								position: 'relative',  // Ensure the image stays in the Flex layout
+								}}
+								onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+								onMouseLeave={(e) => e.currentTarget.style.opacity = '0.6'}
+								/></GlitchFx>
 						</Flex>
 						<Flex
 							position="relative"
@@ -60,17 +82,28 @@ export default function Home() {
 							<Heading
 								wrap="balance"
 								variant="display-strong-s">
-								<span className="font-code">
+								<span className="font-code brand-on-background-medium">
 									<LetterFx
-										trigger="instant">
+										trigger="hover"
+										>
 										Eduardo Belluti
 									</LetterFx>
 								</span>
 							</Heading>
+							<h2 className="font-code" style={{ textAlign: 'left', margin: '0px 0' }}>Product Design, California</h2> {/* Title added below the Heading */}
+							 {/* New paragraph added here */}
+    				<p className="font-code"  style={{ textAlign: 'left', margin: '0,0' }}>
+        I'm an experienced individual contributor designer with over a decade of expertise in SF Bay Area startups. 
+        </p>
+
+		<p className="font-code"  style={{ textAlign: 'left', margin: '0,0' }}>
+        Originally hailing from the business, education, and service hub of Southeast Brazil, I ventured to California for college and have joyfully called it home for the past two decades.</p>
+    
 							<Button
 								id="readDocs"
 								href="https://once-ui.com/docs"
-								variant="secondary">
+								variant="secondary"
+								className="mt-16">
 								<Flex alignItems="center">
 									Read more
 									<Arrow trigger="#readDocs"/>
@@ -80,7 +113,7 @@ export default function Home() {
 					</Flex>
 					<Grid
 						radius="l"
-						border="neutral-medium"
+						border="brand-medium"
 						borderStyle="solid-1"
 						columns="repeat(3, 1fr)"
 						tabletColumns="1col"
@@ -126,14 +159,14 @@ export default function Home() {
 				<Flex
 					gap="12">
 					<Button
-						href="https://github.com/once-ui-system/nextjs-starter"
-						prefixIcon="github" size="s" variant="tertiary">
-						GitHub
+						href="mailto:edbelluti@gmail.com"
+						prefixIcon="Envelope" size="s" variant="tertiary">
+						Contact
 					</Button>
 					<Button
-						href="https://discord.com/invite/5EyAQ4eNdS"
-						prefixIcon="discord" size="s" variant="tertiary">
-						Discord
+						href="https://www.linkedin.com/in/edbelluti/"
+						prefixIcon="MiniIdentification" size="s" variant="tertiary">
+						Linkedin
 					</Button>
 				</Flex>
 			</Flex>
