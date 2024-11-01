@@ -72,7 +72,7 @@ export default function Home() {
 								href="https://once-ui.com/docs"
 								variant="secondary">
 								<Flex alignItems="center">
-									Read 
+									Read more
 									<Arrow trigger="#readDocs"/>
 								</Flex>
 							</Button>
