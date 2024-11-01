@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background, LetterFx, SparkleFx, GlitchFx, Arrow, } from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background, LetterFx, GlitchFx, Arrow, } from '@/once-ui/components';
 import Link from 'next/link';
 
 export default function Home() {
