@@ -84,7 +84,7 @@ export default function Home() {
 								variant="display-strong-s">
 								<span className="font-code brand-on-background-medium">
 									<LetterFx
-										trigger="hover"
+										trigger="instant"
 										>
 										Eduardo Belluti
 									</LetterFx>
